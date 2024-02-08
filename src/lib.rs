@@ -284,13 +284,9 @@ cfg_if! {
         #[path = "js.rs"] mod imp;
     } else if #[cfg(target_os = "hurd")] {
         mod util_libc;
-<<<<<<< HEAD
-        #[path = "3ds.rs"] mod imp;
+        #[path = "hurd.rs"] mod imp;
     } else if #[cfg(target_os = "xous")] {
         #[path = "xous.rs"] mod imp;
-=======
-        #[path = "hurd.rs"] mod imp;
->>>>>>> v0.2.12
     } else if #[cfg(feature = "custom")] {
         use custom as imp;
     } else if #[cfg(all(any(target_arch = "wasm32", target_arch = "wasm64"),
